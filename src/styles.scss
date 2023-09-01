@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+// @import '~@angular/material/prebuilt-themes/deep-purpleamber.css';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+body::-webkit-scrollbar{
+  background: rgb(224, 224, 224);
+  width: 14px;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb{
+  background: blue;
+}
+
+// body::-webkit-scrollbar-track {
+//   background: red;
+// }

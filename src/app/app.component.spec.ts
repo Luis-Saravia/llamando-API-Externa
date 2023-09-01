@@ -1,11 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { ProductsComponent } from './components/products/products.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { ProductsService } from './services/products.service';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [RouterTestingModule],
-    declarations: [AppComponent]
+    imports: [RouterTestingModule, HttpClientModule],
+    providers: [ProductsService],
+    declarations: [AppComponent, ProductsComponent, NavbarComponent]
   }));
 
   it('should create the app', () => {
@@ -14,16 +19,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'layout-E-commerce'`, () => {
+  it(`should have as title 'Productos traidos desde una API'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('layout-E-commerce');
+    expect(app.title).toEqual('Productos traidos desde una API');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('layout-E-commerce app is running!');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Productos traidos desde una API');
   });
 });

@@ -1,0 +1,36 @@
+.product {
+  max-width: 500px;
+  min-width: 290px;
+  height: 490px;
+  padding: 20px;
+  border: 4px solid transparent;
+  border-radius: 20px;
+  margin: 30px auto;
+  display: grid;
+  animation: ease-in-out 1.6s;
+
+  &:hover{
+    box-shadow: 2px 3px 10px 0px;
+    border: 4px solid rgb(255, 253, 163);
+  }
+  
+
+  h3 {
+    font-weight: 700;
+  }
+  
+  img {
+    max-width: 460px;
+    min-width: 260px;
+    height: 290px;
+    border: 4px groove skyblue;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: auto
+  }
+
+  span {
+    font-weight: 700;
+    margin: auto
+  }
+}
